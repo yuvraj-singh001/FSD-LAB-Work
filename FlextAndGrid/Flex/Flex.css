@@ -9,6 +9,7 @@
 }
 .container{
     display: flex;
+    flex-wrap: nowrap;
     border: 2px solid black;
     height: 70px;
     justify-content: space-between;
@@ -21,22 +22,26 @@
     border: 2px dotted black;
     font-size: 25px;
     padding: 4px;
+    width: 800px;
 }
 .c2{
     margin: 4px;
     border: 2px dotted black;
     font-size: 25px;
     padding: 4px;
+    width: 800px;
 }
 .c3{
     margin: 4px;
     border: 2px dotted black;
     font-size: 25px;
     padding: 4px;
+    width: 800px;
 }
 .c4{
     margin: 4px;
     border: 2px dotted black;
     font-size: 25px;
     padding: 4px;
+    width: 800px;
 }
