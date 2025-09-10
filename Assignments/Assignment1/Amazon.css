@@ -3,7 +3,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(240, 236, 236);
+    background-color: rgb(230, 230, 205);
 }
 
 .heading{
@@ -15,7 +15,7 @@ body{
 
 .container{
     border: 1px solid rgb(86, 62, 62);
-    background-color: rgba(51, 51, 51, 0.201);
+    background-color: rgba(146, 171, 181, 0.829);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,13 +26,13 @@ body{
 .b1,.b2,.b3,.b4{
     height:400px ;
     width: 300px;
-    background-color: rgb(181, 167, 89);
+    background-color: rgb(109, 143, 138);
 }
 
 .mainbox{
     height:400px ;
     width: 300px;
-    background-color: rgb(185, 176, 123);
+    background-color: rgb(160, 227, 218);
     grid-template-columns: repeat(2, 1fr);
     grid-template-row: repeat(2, 1fr);
     display: grid;
@@ -106,7 +106,7 @@ body{
 
 .nav{
     text-align: center; 
-    background-color: rgb(86, 62, 62);
+    background-color: rgb(65, 97, 125);
     height: 50px;
     line-height: 50px;
     color: white;
@@ -128,7 +128,7 @@ body{
 
 .navbar{
     text-align: center; 
-    background-color: rgb(180, 112, 112);
+    background-color: rgb(52, 82, 119);
     height: 70px;
     line-height: 50px;
     color: white;
@@ -188,8 +188,9 @@ body{
 
 .footer{
     text-align: center; 
-    background-color: rgba(61, 77, 79, 0.478);
-    height: 150px;
+    margin-top: 10px;
+    background-color: rgb(157, 196, 201);
+    height: 5   0px;
     line-height: 50px;
     color: white;
     font-size: 15px;
