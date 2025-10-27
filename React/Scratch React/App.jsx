@@ -5,7 +5,7 @@ const h2 = React.createElement("h2", {style:{backgroundColor:"brown"}}, "Welcome
 const l1 =React.createElement("li", {style:{backgroundColor:"aliceblue"}}, "java");
 const l2 =React.createElement("li", {style:{backgroundColor:"blue"}}, "python");
 const l3 =React.createElement("li", {style:{backgroundColor:"red"}}, "React");
-const ul =React.createElement("ul", {style:{backgroundColor:"lightblue"}}, li1,li2,li3);
+const ul =React.createElement("ul", {style:{backgroundColor:"lightblue"}}, l1,l2,l3);
 const pic =React.createElement("img", {src:"https://imgs.search.brave.com/OA84dXlw9iy3bO5VRqJHcNJSOxIF_Uzm6CUQVdN3fX8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5qSXhOR1Zq/TTJZdE9HVTNNeTAw/Tm1ZMUxXRXpOVGt0/T1dVek1EY3lPVFps/TTJFMVhrRXlYa0Zx/Y0djQC5qcGc", style:{height:'200px',width:'200px'}});
 const myname=React.createElement("h1", {}, "Yuvraj Singh");
 
