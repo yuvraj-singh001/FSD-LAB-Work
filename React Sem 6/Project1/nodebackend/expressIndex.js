@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const port = 4007;
+const storeProductsUrl = 'https://fakestoreapi.com/products';
+const cart = [];
 
 app.use(cors());
 app.use(express.json());
@@ -71,6 +73,50 @@ app.get('/data', (req, res) => {
     { id: 3, title: 'Product 3', image: 'https://via.placeholder.com/200' }
   ];
   res.json({ msg: fakeData });
+});
+
+// Products route
+app.get('/products', async (req, res) => {
+  try {
+    const response = await fetch(storeProductsUrl);
+    if (!response.ok) {
+      throw new Error(`FakeStore API responded with status ${response.status}`);
+    }
+    const products = await response.json();
+    res.json({ msg: products });
+  } catch (err) {
+    res.status(500).json({ msg: 'Unable to load products right now' });
+  }
+});
+
+// Cart routes
+app.get('/cart', (req, res) => {
+  res.json({ msg: cart });
+});
+
+app.post('/cart', (req, res) => {
+  const { id, title, price, image } = req.body;
+
+  if (id === undefined || !title) {
+    return res.status(400).json({ msg: 'Product id and title are required' });
+  }
+
+  const productId = Number(id);
+  const existingItem = cart.find(item => item.id === productId);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      id: productId,
+      title,
+      price: Number(price) || 0,
+      image: image || '',
+      quantity: 1
+    });
+  }
+
+  res.json({ msg: 'Product added to cart', cart });
 });
 
 // Students route
